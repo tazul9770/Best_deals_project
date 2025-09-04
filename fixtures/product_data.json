@@ -1,0 +1,199 @@
+[
+  {
+    "model": "product.category",
+    "pk": 1,
+    "fields": {
+      "name": "Electronics",
+      "description": "Electronic gadgets and devices"
+    }
+  },
+  {
+    "model": "product.category",
+    "pk": 2,
+    "fields": {
+      "name": "Clothing",
+      "description": "Fashionable clothing for men and women"
+    }
+  },
+  {
+    "model": "product.category",
+    "pk": 3,
+    "fields": {
+      "name": "Books",
+      "description": "Educational and entertainment books"
+    }
+  },
+  {
+    "model": "product.category",
+    "pk": 4,
+    "fields": {
+      "name": "Home Appliances",
+      "description": "Daily use home appliances"
+    }
+  },
+  {
+    "model": "product.category",
+    "pk": 5,
+    "fields": {
+      "name": "Sports",
+      "description": "Sports items and accessories"
+    }
+  },
+
+  {
+    "model": "product.product",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "name": "Smartphone",
+      "description": "Latest 5G smartphone with AMOLED display",
+      "price": "55000.00",
+      "stock": 25,
+      "image": "",
+      "created_at": "2025-09-03T10:00:00Z"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 2,
+    "fields": {
+      "category": 1,
+      "name": "Laptop",
+      "description": "High performance gaming laptop",
+      "price": "95000.00",
+      "stock": 10,
+      "image": "",
+      "created_at": "2025-09-03T10:05:00Z"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 3,
+    "fields": {
+      "category": 1,
+      "name": "Headphones",
+      "description": "Wireless noise-cancelling headphones",
+      "price": "12000.00",
+      "stock": 40,
+      "image": "",
+      "created_at": "2025-09-03T10:10:00Z"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 4,
+    "fields": {
+      "category": 2,
+      "name": "T-Shirt",
+      "description": "Cotton T-shirt for men",
+      "price": "800.00",
+      "stock": 100,
+      "image": "",
+      "created_at": "2025-09-03T10:15:00Z"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 5,
+    "fields": {
+      "category": 2,
+      "name": "Jeans",
+      "description": "Slim fit jeans for men",
+      "price": "1500.00",
+      "stock": 60,
+      "image": "",
+      "created_at": "2025-09-03T10:20:00Z"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 6,
+    "fields": {
+      "category": 2,
+      "name": "Jacket",
+      "description": "Leather jacket for winter",
+      "price": "4500.00",
+      "stock": 20,
+      "image": "",
+      "created_at": "2025-09-03T10:25:00Z"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 7,
+    "fields": {
+      "category": 3,
+      "name": "Python Programming",
+      "description": "Book for learning Python programming",
+      "price": "600.00",
+      "stock": 200,
+      "image": "",
+      "created_at": "2025-09-03T10:30:00Z"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 8,
+    "fields": {
+      "category": 3,
+      "name": "Harry Potter",
+      "description": "Fantasy novel by J.K. Rowling",
+      "price": "1200.00",
+      "stock": 50,
+      "image": "",
+      "created_at": "2025-09-03T10:35:00Z"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 9,
+    "fields": {
+      "category": 4,
+      "name": "Refrigerator",
+      "description": "Double door refrigerator",
+      "price": "45000.00",
+      "stock": 5,
+      "image": "",
+      "created_at": "2025-09-03T10:40:00Z"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 10,
+    "fields": {
+      "category": 4,
+      "name": "Microwave Oven",
+      "description": "Convection microwave oven",
+      "price": "15000.00",
+      "stock": 15,
+      "image": "",
+      "created_at": "2025-09-03T10:45:00Z"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 11,
+    "fields": {
+      "category": 5,
+      "name": "Football",
+      "description": "Professional football size 5",
+      "price": "1200.00",
+      "stock": 30,
+      "image": "",
+      "created_at": "2025-09-03T10:50:00Z"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 12,
+    "fields": {
+      "category": 5,
+      "name": "Cricket Bat",
+      "description": "English willow cricket bat",
+      "price": "5000.00",
+      "stock": 12,
+      "image": "",
+      "created_at": "2025-09-03T10:55:00Z"
+    }
+  }
+]
