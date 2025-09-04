@@ -1,3 +1,4 @@
+best_env/
 __pycache__/
-.env/
 db.sqlite3
+.env
