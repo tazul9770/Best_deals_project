@@ -1,8 +1,6 @@
-from rest_framework.response import Response
-from rest_framework import status
-from product.models import Product, Category
+from product.models import Product, Category, ProductImage
 from order.models import Review
-from product.serializer import ProductSerializer, CategorySerializer, ReviewSerializer
+from product.serializer import ProductSerializer, CategorySerializer, ReviewSerializer, ProductImgSerializer
 from django.db.models import Count
 from rest_framework.viewsets import ModelViewSet
 from django_filters.rest_framework import DjangoFilterBackend
@@ -11,7 +9,6 @@ from product.pagination import CustomPagination
 from product.filters import ProductFilter
 from api.permissions import IsAdminOrReadOnly
 from product.permissions import IsReviewAuthorOrReadOnly
-from rest_framework.permissions import DjangoModelPermissions
         
 class ProductViewSet(ModelViewSet):
     queryset = Product.objects.all()
@@ -23,6 +20,16 @@ class ProductViewSet(ModelViewSet):
     search_fields = ['name', 'description']
     ordering_fields = ['price']
     permission_classes = [IsAdminOrReadOnly]
+
+class ProductImgViewSet(ModelViewSet):
+    serializer_class = ProductImgSerializer
+    permission_classes = [IsAdminOrReadOnly]
+
+    def get_queryset(self):
+        return ProductImage.objects.filter(product_id=self.kwargs.get('product_pk'))
+    
+    def perform_create(self, serializer):
+        serializer.save(product_id=self.kwargs.get('product_pk'))
 
 class CategoryViewSet(ModelViewSet):
     queryset = Category.objects.annotate(product_count=Count('product')).all()
@@ -40,9 +47,7 @@ class ReviewViewSet(ModelViewSet):
         serializer.save(user=self.request.user)
 
     def get_queryset(self):
-        return Review.objects.filter(product_id=self.kwargs['product_pk'])
+        return Review.objects.filter(product_id=self.kwargs.get('product_pk'))
 
     def get_serializer_context(self):
-        return {
-            'product_id':self.kwargs['product_pk'],
-        }
+        return {'product_id':self.kwargs.get('product_pk')}

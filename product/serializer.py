@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from decimal import Decimal
-from product.models import Product, Category
+from product.models import Product, Category, ProductImage
 from order.models import Review
 from django.contrib.auth import get_user_model
 
@@ -10,15 +10,17 @@ class CategorySerializer(serializers.ModelSerializer):
         model = Category
         fields = ['id', 'name', 'description', 'product_count']
 
+class ProductImgSerializer(serializers.ModelSerializer):
+    class Meta:
+        ref_name = "ProductImageSerializer"
+        model = ProductImage
+        fields = ['id','image']
+
 class ProductSerializer(serializers.ModelSerializer):
+    images = ProductImgSerializer(many=True, read_only=True)
     class Meta:
         model = Product
-        fields = ['id', 'name', 'description', 'stock', 'price', 'category', 'tax_price']
-
-    # category = serializers.HyperlinkedRelatedField(
-    #      queryset = Category.objects.all(),
-    #      view_name = 'view_specific_category',
-    #  )
+        fields = ['id', 'name', 'description', 'stock', 'price', 'category', 'tax_price', 'images']
 
     tax_price = serializers.SerializerMethodField(method_name='calculate_tax')
 
@@ -30,6 +32,11 @@ class ProductSerializer(serializers.ModelSerializer):
         if price <= 0:
             raise serializers.ValidationError("Price could not negative")
         return price
+    
+class ProductImgSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProductImage
+        fields = ['id','image']
     
 class SimpleUserSerializer(serializers.ModelSerializer):
     name = serializers.SerializerMethodField(method_name='get_name')
