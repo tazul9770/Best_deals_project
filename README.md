@@ -17,7 +17,6 @@ The project uses **JWT authentication via Djoser** and provides auto-generated A
 | 🛒 **Cart System**         | Add, remove, update items in the cart                       | ✅ Done  |
 | 📦 **Order Processing**    | Place orders & manage order details                         | ✅ Done  |
 | 📑 **Swagger API Docs**    | Auto-generated Swagger & Redoc API Documentation            | ✅ Done  |
-| 📧 **Email Support**       | Order confirmation emails via SMTP integration              | 🔄 Optional |
 
 ---
 
