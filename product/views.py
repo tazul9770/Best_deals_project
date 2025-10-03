@@ -11,7 +11,7 @@ from api.permissions import IsAdminOrReadOnly
 from product.permissions import IsReviewAuthorOrReadOnly
         
 class ProductViewSet(ModelViewSet):
-    queryset = Product.objects.all()
+    queryset = Product.objects.select_related('category').prefetch_related('images').all().order_by('-created_at')
     serializer_class = ProductSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     # filterset_fields = ['category_id', 'price']

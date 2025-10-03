@@ -11,8 +11,8 @@ class CategorySerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'description', 'product_count']
 
 class ProductImgSerializer(serializers.ModelSerializer):
+    image = serializers.ImageField()
     class Meta:
-        ref_name = "ProductImageSerializer"
         model = ProductImage
         fields = ['id','image']
 
@@ -32,11 +32,6 @@ class ProductSerializer(serializers.ModelSerializer):
         if price <= 0:
             raise serializers.ValidationError("Price could not negative")
         return price
-    
-class ProductImgSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = ProductImage
-        fields = ['id','image']
     
 class SimpleUserSerializer(serializers.ModelSerializer):
     name = serializers.SerializerMethodField(method_name='get_name')

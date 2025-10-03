@@ -49,8 +49,8 @@
       "description": "Latest 5G smartphone with AMOLED display",
       "price": "55000.00",
       "stock": 25,
-      "image": "",
-      "created_at": "2025-09-03T10:00:00Z"
+      "created_at": "2025-09-03T10:00:00Z",
+      "updated_at": "2025-09-03T10:00:00Z"
     }
   },
   {
@@ -62,8 +62,8 @@
       "description": "High performance gaming laptop",
       "price": "95000.00",
       "stock": 10,
-      "image": "",
-      "created_at": "2025-09-03T10:05:00Z"
+      "created_at": "2025-09-03T10:05:00Z",
+      "updated_at": "2025-09-03T10:05:00Z"
     }
   },
   {
@@ -75,8 +75,8 @@
       "description": "Wireless noise-cancelling headphones",
       "price": "12000.00",
       "stock": 40,
-      "image": "",
-      "created_at": "2025-09-03T10:10:00Z"
+      "created_at": "2025-09-03T10:10:00Z",
+      "updated_at": "2025-09-03T10:10:00Z"
     }
   },
   {
@@ -88,8 +88,8 @@
       "description": "Cotton T-shirt for men",
       "price": "800.00",
       "stock": 100,
-      "image": "",
-      "created_at": "2025-09-03T10:15:00Z"
+      "created_at": "2025-09-03T10:15:00Z",
+      "updated_at": "2025-09-03T10:15:00Z"
     }
   },
   {
@@ -101,8 +101,8 @@
       "description": "Slim fit jeans for men",
       "price": "1500.00",
       "stock": 60,
-      "image": "",
-      "created_at": "2025-09-03T10:20:00Z"
+      "created_at": "2025-09-03T10:20:00Z",
+      "updated_at": "2025-09-03T10:20:00Z"
     }
   },
   {
@@ -114,8 +114,8 @@
       "description": "Leather jacket for winter",
       "price": "4500.00",
       "stock": 20,
-      "image": "",
-      "created_at": "2025-09-03T10:25:00Z"
+      "created_at": "2025-09-03T10:25:00Z",
+      "updated_at": "2025-09-03T10:25:00Z"
     }
   },
   {
@@ -127,8 +127,8 @@
       "description": "Book for learning Python programming",
       "price": "600.00",
       "stock": 200,
-      "image": "",
-      "created_at": "2025-09-03T10:30:00Z"
+      "created_at": "2025-09-03T10:30:00Z",
+      "updated_at": "2025-09-03T10:30:00Z"
     }
   },
   {
@@ -140,8 +140,8 @@
       "description": "Fantasy novel by J.K. Rowling",
       "price": "1200.00",
       "stock": 50,
-      "image": "",
-      "created_at": "2025-09-03T10:35:00Z"
+      "created_at": "2025-09-03T10:35:00Z",
+      "updated_at": "2025-09-03T10:35:00Z"
     }
   },
   {
@@ -153,8 +153,8 @@
       "description": "Double door refrigerator",
       "price": "45000.00",
       "stock": 5,
-      "image": "",
-      "created_at": "2025-09-03T10:40:00Z"
+      "created_at": "2025-09-03T10:40:00Z",
+      "updated_at": "2025-09-03T10:40:00Z"
     }
   },
   {
@@ -166,8 +166,8 @@
       "description": "Convection microwave oven",
       "price": "15000.00",
       "stock": 15,
-      "image": "",
-      "created_at": "2025-09-03T10:45:00Z"
+      "created_at": "2025-09-03T10:45:00Z",
+      "updated_at": "2025-09-03T10:45:00Z"
     }
   },
   {
@@ -179,21 +179,8 @@
       "description": "Professional football size 5",
       "price": "1200.00",
       "stock": 30,
-      "image": "",
-      "created_at": "2025-09-03T10:50:00Z"
-    }
-  },
-  {
-    "model": "product.product",
-    "pk": 11,
-    "fields": {
-      "category": 5,
-      "name": "Cricket ball",
-      "description": "Professionalball size 5",
-      "price": "1200.76",
-      "stock": 30,
-      "image": "",
-      "created_at": "2025-09-03T10:50:00Z"
+      "created_at": "2025-09-03T10:50:00Z",
+      "updated_at": "2025-09-03T10:50:00Z"
     }
   },
   {
@@ -201,12 +188,25 @@
     "pk": 12,
     "fields": {
       "category": 5,
+      "name": "Cricket Ball",
+      "description": "Professional cricket ball",
+      "price": "1200.76",
+      "stock": 30,
+      "created_at": "2025-09-03T10:52:00Z",
+      "updated_at": "2025-09-03T10:52:00Z"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 13,
+    "fields": {
+      "category": 5,
       "name": "Cricket Bat",
       "description": "English willow cricket bat",
       "price": "5000.00",
       "stock": 12,
-      "image": "",
-      "created_at": "2025-09-03T10:55:00Z"
+      "created_at": "2025-09-03T10:55:00Z",
+      "updated_at": "2025-09-03T10:55:00Z"
     }
   }
 ]
